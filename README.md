@@ -19,7 +19,7 @@
 
 ### Meng Wang:
 
--   Was responsible for McCafé part, focusing on history, ingredient, price with `<section>`, `<h2>`, `<ul>`, `<li>`.
+-   Was responsible for McCafé part, focusing on McCafe production, ingredient, price with `<section>`, `<h2>`, `<ul>`, `<li>` `<svg>`.
 
 ### Nick Gowler:
 
