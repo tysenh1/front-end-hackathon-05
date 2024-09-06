@@ -15,7 +15,7 @@
 
 ### Christian Jorge Martin:
 
--   Worked on [specific elements] of the webpage.
+-   Worked creating McDonald's History on the webpage and created header.
 
 ### Meng Wang:
 
