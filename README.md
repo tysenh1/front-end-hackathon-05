@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-[Provide a brief summary of the project, including the theme and objectives.]
+
 
 ## Team Members:
 
@@ -19,12 +19,12 @@
 
 ### Meng Wang:
 
--   Was responsible for [specific tasks], focusing on [specific HTML elements].
+-   Was responsible for McCafé part, focusing on McCafe production, ingredient, price with `<section>`, `<h2>`, `<ul>`, `<li>` `<svg>`.
 
 ### Nick Gowler:
 
--   Handled [specific sections], covering [specific topics or features].
+-   Created McFlurrey section.
 
 ### Tysen Heck:
 
--   Worked on [specific elements] of the webpage.
+-   Worked on the Big Mac section of the webpage, focusing mostly on unordered list elements.
