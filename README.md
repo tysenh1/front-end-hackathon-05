@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-[Provide a brief summary of the project, including the theme and objectives.]
+
 
 ## Team Members:
 
@@ -27,4 +27,4 @@
 
 ### Tysen Heck:
 
--   Worked on [specific elements] of the webpage.
+-   Worked on the Big Mac section of the webpage, focusing mostly on unordered list elements.
