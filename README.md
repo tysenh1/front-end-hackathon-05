@@ -23,7 +23,7 @@
 
 ### Nick Gowler:
 
--   Handled [specific sections], covering [specific topics or features].
+-   Created McFlurrey section.
 
 ### Tysen Heck:
 
