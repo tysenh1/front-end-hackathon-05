@@ -4,6 +4,200 @@ body {
     font-family: 'Roboto', sans-serif, 'Arial', sans-serif;
 }
 
+
+/*McCafe*/
+.mocha {
+    display: flex;  
+    margin-left: 10em;
+    margin-right: 5em;
+    margin-bottom: 5em;
+}
+
+
+.mocha img {
+    display: block;
+    margin: auto;
+}
+
+.mochatext {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    margin-left: 15em;
+    width: 100%;
+}
+
+.mochatext h3{
+    font-size: 60px;
+    text-align:left;
+    font-weight:900;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.mochatext p{
+    font-size: 17px;
+    margin-top: auto;  
+    text-align:left;
+}
+
+.ingredients, .mochaprice{
+    background-color: #F9F9F9;
+    width: 100%;
+}
+
+.ingredients h3, .mochaprice h3 {
+    text-align: center;
+    font-size: 40px;
+    font-weight:900;
+    padding-top: 20px; 
+}
+
+.ingredients h3::after{
+    content: '';
+    display: block;
+    background-color: black;
+    height: 1px;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.ingredients ul{
+    list-style-type: none;
+    font-size: 1em;
+    padding: 0 8em;
+    line-height: 2em;
+}
+
+.milk, .chocolate, .cream, .coffe {
+    margin-top: 1em;
+
+}
+
+.mochacheckmore {
+    font-size: 1em;
+    text-align: center;
+    padding:20px
+}
+
+.mochacheckmore a{
+    text-decoration: none;
+    color:#DA291C;
+}
+
+.mochacheckmore a:hover{
+    color: #FFC72C;
+    background-color: #DA291C;
+}
+
+.check {
+    font-size: 20px;
+}
+
+.mochaprice h3::after {
+    content: '';
+    display: block;
+    background-color: black;
+    height: 1px;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 70%;
+    margin: auto;  
+}
+
+thead th {
+    background-color: #DA291C;
+    color: #FFC72C; 
+    text-align: center;
+    padding: 12px 8px; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px 8px; 
+    text-align: center; 
+    font-size: 14px;
+    color: #333; 
+}
+
+tbody tr:hover {
+    background-color: #FFC72C; 
+}
+
+td, th {
+    border: 1px solid #DA291C; 
+}
+
+#McCafe h2  {
+    font-size: 40px;  
+}
+#McCafe h2::after{
+    content: '';
+    display: block;
+    background-color: black;
+    height: 1px;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .mocha {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 3em;
+    }
+
+    .mocha img {
+        width: 100%; 
+        max-width: 300px;
+        margin: 0 auto; 
+    }
+
+    .mochatext {
+        margin-left: 0; 
+        width: 100%;
+    }
+
+    .mochatext h3 {
+        font-size: 30px; 
+        text-align: center;
+        margin-top: 0.5em;
+    }
+
+    .mochatext p {
+        font-size: 16px;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .ingredients, .mochaprice {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 100%; 
+    }
+
+    .ingredients ul {
+        padding: 0 2em; 
+    }
+
+    .ingredients h3, .mochaprice h3 {
+        font-size: 32px;
+    }
+}
+
+/*BigMac*/
 #BigMac {
     display: grid;
     grid-template-areas: 
@@ -65,3 +259,4 @@ body {
 #BigMac div:hover {
     box-shadow: 0 4px 8px 0 #bf0c0c, 0 6px 20px 0 #ffc600;
 }
+

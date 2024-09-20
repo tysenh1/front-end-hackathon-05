@@ -20,6 +20,7 @@ Hackthon project
 ### Meng Wang:
 
 -   Was responsible for McCafé part, focusing on McCafe production, ingredient, price with `<section>`, `<h2>`, `<ul>`, `<li>` `<svg>`.
+-   Update layout css file into css file for McCafe part.
 
 ### Nick Gowler:
 
