@@ -1,8 +1,7 @@
 # Project Documentation
 
 ## Project Overview
-
-
+Hackthon project
 
 ## Team Members:
 
@@ -16,6 +15,7 @@
 ### Christian Jorge Martin:
 
 -   Worked creating McDonald's History on the webpage and created header.
+-   Worked on creating the style sheet css file for the header and the history section of the webpage.
 
 ### Meng Wang:
 
