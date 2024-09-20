@@ -10,7 +10,7 @@ body {
     margin-left: 10em;
     margin-right: 5em;
     margin-bottom: 5em;
-    position: relative;
+
 }
 
 
@@ -38,10 +38,12 @@ body {
 .mochatext p{
     font-size: 17px;
     margin-top: auto;  
+    text-align:left;
 }
 
 .ingredients, .mochaprice{
     background-color: #F9F9F9;
+    width: 100%;
 }
 
 .ingredients h3, .mochaprice h3 {
@@ -143,3 +145,60 @@ td, th {
     height: 1px;
     margin-top: 20px;
 }
+
+
+
+@media (max-width: 768px) {
+
+    .mocha {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 3em;
+    }
+
+    .mocha img {
+        width: 100%; 
+        max-width: 300px;
+        margin: 0 auto; 
+    }
+
+    .mochatext {
+        margin-left: 0; 
+        width: 100%;
+    }
+
+    .mochatext h3 {
+        font-size: 30px; 
+        text-align: center;
+        margin-top: 0.5em;
+    }
+
+    .mochatext p {
+        font-size: 16px;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .ingredients, .mochaprice {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 100%; 
+    }
+
+    .ingredients ul {
+        padding: 0 2em; 
+    }
+
+    .ingredients h3, .mochaprice h3 {
+        font-size: 32px;
+    }
+
+}
+
+
