@@ -28,3 +28,4 @@ Hackthon project
 ### Tysen Heck:
 
 -   Worked on the Big Mac section of the webpage, focusing mostly on unordered list elements.
+-   Also worked on the css for the BIg Mac section, focusing mostly on grid, media query, and hover animation properties.
