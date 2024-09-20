@@ -3,3 +3,27 @@
 body {
     font-family: 'Roboto', sans-serif, 'Arial', sans-serif;
 }
+
+#BigMac {
+    display: grid;
+    grid-template-areas: 
+    'BigMacTitle BigMacTitle'
+    'BigMacHistory BigMacNutrition'
+    'BigMacFacts BigMacNutrition';
+}
+
+#BigMac #BigMacTitle {
+    grid-area: BigMacTitle;
+}
+
+#BigMac #BigMacHistory {
+    grid-area: BigMacHistory;
+}
+
+#BigMac #BigMacNutrition {
+    grid-area: BigMacNutrition;
+}
+
+#BigMac #BigMacFacts {
+    grid-area: BigMacFacts;
+}
