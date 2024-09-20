@@ -10,7 +10,7 @@ body {
     margin-left: 10em;
     margin-right: 5em;
     margin-bottom: 5em;
-
+    line-height: 3em;
 }
 
 
@@ -36,14 +36,16 @@ body {
 }
 
 .mochatext p{
-    font-size: 17px;
-    margin-top: auto;  
+    font-size: 20px;
+    margin-top: 10px;  
     text-align:left;
+
 }
 
 .ingredients, .mochaprice{
     background-color: #F9F9F9;
     width: 100%;
+    font-size: 20px;
 }
 
 .ingredients h3, .mochaprice h3 {
@@ -72,7 +74,6 @@ body {
 
 .milk, .chocolate, .cream, .coffe {
     margin-top: 1em;
-
 }
 
 .mochacheckmore {
@@ -123,7 +124,7 @@ thead th {
 td {
     padding: 10px 8px; 
     text-align: center; 
-    font-size: 14px;
+    font-size: 17px;
     color: #333; 
 }
 
@@ -149,7 +150,6 @@ td, th {
 
 
 @media (max-width: 768px) {
-
     .mocha {
         display: flex;
         flex-wrap: wrap;
@@ -191,6 +191,7 @@ td, th {
         width: 100%; 
     }
 
+
     .ingredients ul {
         padding: 0 2em; 
     }
@@ -198,6 +199,7 @@ td, th {
     .ingredients h3, .mochaprice h3 {
         font-size: 32px;
     }
+
 
 }
 
