@@ -10,10 +10,19 @@ body {
     'BigMacTitle BigMacTitle'
     'BigMacHistory BigMacNutrition'
     'BigMacFacts BigMacNutrition';
+    gap: 30px;
+    margin-right: 4em;
+    margin-left: 4em;
+    margin-top: 6em;
+    margin-bottom: 6em;
 }
 
 #BigMac #BigMacTitle {
+    display: flex;
     grid-area: BigMacTitle;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
 }
 
 #BigMac #BigMacHistory {
@@ -22,8 +31,37 @@ body {
 
 #BigMac #BigMacNutrition {
     grid-area: BigMacNutrition;
+    width: 35em;
 }
 
 #BigMac #BigMacFacts {
     grid-area: BigMacFacts;
+}
+
+@media(max-width:1150px) {
+    #BigMac {
+        grid-template-areas: 
+        'BigMacTitle'
+        'BigMacHistory'
+        'BigMacNutrition'
+        'BigMacFacts';
+        margin-right: 6em;
+        margin-left: 6em;
+    }
+
+    #BigMac #BigMacNutrition {
+        width: auto;
+    }
+}
+
+#BigMac div {
+    border: black 2px solid;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: #c0c0c0;
+    transition: box-shadow 150ms;
+}
+
+#BigMac div:hover {
+    box-shadow: 0 4px 8px 0 #bf0c0c, 0 6px 20px 0 #ffc600;
 }
