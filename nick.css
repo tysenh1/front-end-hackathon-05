@@ -110,7 +110,7 @@
     color: #000;
     border: 3px #DA291C solid;
     border-radius: 15px;
-
+    visibility: hidden;
 }
 
 .Confetti-info {
@@ -120,7 +120,7 @@
     color: #000;
     border: 3px #DA291C solid;
     border-radius: 15px;
-
+    visibility: hidden;
 }
 
 .Oreo-info {
@@ -130,7 +130,7 @@
     color: #000;
     border: 3px #DA291C solid;
     border-radius: 15px;
-
+    visibility: hidden;
 }
 
 .SKOR-info {
@@ -140,7 +140,7 @@
     color: #000;
     border: 3px #DA291C solid;
     border-radius: 15px;
-
+    visibility: hidden;
 }
 
 .Smarties-info {
@@ -150,7 +150,7 @@
     color: #000;
     border: 3px #DA291C solid;
     border-radius: 15px;
-
+    visibility: hidden;
 }
 
 @media (max-width: 640px) {
