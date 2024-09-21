@@ -1,0 +1,184 @@
+.McFlurry-title {
+    text-align: center;
+    border-top: 3px #DA291C solid;
+    border-bottom: 3px #DA291C solid;
+}
+
+.McFlurry-title h2 {
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+.McFlurry-title p{
+    font-size: 1.25em;
+}
+
+.McFlurrey {
+    display: flex;
+}
+
+.McFlurrey-Img {
+    display: flex;
+    flex: 1;
+    height: 400px;
+    padding: 20px;
+    border: 10px #DA291C solid;
+    border-radius: 15px;
+    background-color: #FFC72C;
+}
+
+.McFlurrey-Img img { 
+    border: 3px #DA291C solid;
+    border-radius: 15px;
+}
+
+.McFlurrey-Flavors {
+    display: flex;
+    flex: 1;
+    order: 2;
+    height: 400px;
+    display: grid;
+    justify-content: space-around;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+    "Head"
+    "List"
+    ;
+}
+
+.McFlurrey-Flavors-Head {
+    display: grid;
+    grid-area: Head;
+    align-items: end;
+    font-size: 2em;
+    margin-bottom: -20px;
+    text-decoration: underline;
+}
+
+.McFlurrey-Flavors-List {
+    display: grid;
+    grid-area: List;
+    font-size: 1.25em;
+}
+
+.McFlurrey-Flavors-List li {
+    background-color: #DA291C;
+    color: #fff;
+    border: 3px #DA291C solid;
+    border-radius: 15px;
+    list-style: none;
+    text-decoration: none;
+    display: block;
+    margin-left: -20px;
+    margin-bottom: 2px;
+    padding: 10px;
+    transition: all 100ms ease;
+}
+
+.McFlurrey-Flavors-List li:hover {
+    background-color: #FFC72C;
+    color: #DA291C;
+}
+
+.McFlurrey-Ingredients {
+    display: flex;
+    flex: 2;
+    order: 3;
+    text-align: center;
+    align-items: center;
+    justify-content: left;
+    height: 550px;
+}
+
+.Smores-info {
+    position: absolute;
+    width: 400px;
+    background-color: #FFC72C;
+    color: #000;
+    border: 3px #DA291C solid;
+    border-radius: 15px;
+
+}
+
+.Strawberry-info {
+    position: absolute;
+    width: 400px;
+    background-color: #FFC72C;
+    color: #000;
+    border: 3px #DA291C solid;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+.Confetti-info {
+    position: absolute;
+    width: 400px;
+    background-color: #FFC72C;
+    color: #000;
+    border: 3px #DA291C solid;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+.Oreo-info {
+    position: absolute;
+    width: 400px;
+    background-color: #FFC72C;
+    color: #000;
+    border: 3px #DA291C solid;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+.SKOR-info {
+    position: absolute;
+    width: 400px;
+    background-color: #FFC72C;
+    color: #000;
+    border: 3px #DA291C solid;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+.Smarties-info {
+    position: absolute;
+    width: 400px;
+    background-color: #FFC72C;
+    color: #000;
+    border: 3px #DA291C solid;
+    border-radius: 15px;
+    visibility: hidden;
+}
+
+@media (max-width: 640px) {
+    .McFlurrey {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "head img"
+        "content content"
+        ;
+    }
+    .McFlurrey-Img {
+        display: grid;
+        grid-area: img;
+    }
+    .McFlurrey-Flavors{
+        display: grid;
+        grid-area: head;
+    }  
+
+    .McFlurrey-Ingredients{
+        display: grid;
+        grid-area: content;
+        position: static;
+        align-items: baseline;
+        justify-items: center;
+    }
+
+}
