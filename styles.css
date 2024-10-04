@@ -225,15 +225,18 @@ td, th {
 
 #BigMac #BigMacHistory {
     grid-area: BigMacHistory;
+    display: grid;
 }
 
 #BigMac #BigMacNutrition {
     grid-area: BigMacNutrition;
     width: 35em;
+    display: none;
 }
 
 #BigMac #BigMacFacts {
     grid-area: BigMacFacts;
+    display: none;
 }
 
 @media(max-width:1150px) {
