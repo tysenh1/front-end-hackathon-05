@@ -30,3 +30,4 @@ Hackthon project
 
 -   Worked on the Big Mac section of the webpage, focusing mostly on unordered list elements.
 -   Also worked on the css for the BIg Mac section, focusing mostly on grid, media query, and hover animation properties.
+-   Added JavaScript code to complement the existing webpage and redesigned the layout of the Big Mac section accordingly

@@ -204,45 +204,66 @@ td, th {
 /*BigMac*/
 #BigMac {
     display: grid;
-    grid-template-areas: 
+    /* grid-template-areas: 
     'BigMacTitle BigMacTitle'
     'BigMacHistory BigMacNutrition'
-    'BigMacFacts BigMacNutrition';
+    'BigMacFacts BigMacNutrition'; */
     gap: 30px;
-    margin-right: 4em;
-    margin-left: 4em;
+    /* margin-right: 4em;
+    margin-left: 4em; */
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 6em;
     margin-bottom: 6em;
+    width: 70%;
 }
 
 #BigMac #BigMacTitle {
     display: flex;
-    grid-area: BigMacTitle;
+    /* grid-area: BigMacTitle; */
     justify-content: center;
     align-items: center;
     font-size: 60px;
 }
 
 #BigMac #BigMacHistory {
-    grid-area: BigMacHistory;
+    /* grid-area: BigMacHistory; */
+    display: grid;
+}
+
+#BigMac #BigMacNutrition h3 {
+    grid-area: BigMacNutritionHeader;
+}
+
+#BigMacIngredientsSpan {
+    grid-area: BigMacIngredients;
+}
+
+#BigMacNutritionSpan {
+    grid-area: BigMacNutrition;
 }
 
 #BigMac #BigMacNutrition {
-    grid-area: BigMacNutrition;
-    width: 35em;
+    /* grid-area: BigMacNutrition; */
+    /* width: 35em; */
+    display: none;
+    grid-template-areas:
+        'BigMacNutritionHeader BigMacNutritionHeader'
+        'BigMacIngredients BigMacNutrition';
 }
 
 #BigMac #BigMacFacts {
-    grid-area: BigMacFacts;
+    /* grid-area: BigMacFacts; */
+    display: none;
 }
 
 @media(max-width:1150px) {
     #BigMac {
-        grid-template-areas: 
+        /* grid-template-areas: 
         'BigMacTitle'
         'BigMacHistory'
         'BigMacNutrition'
-        'BigMacFacts';
+        'BigMacFacts'; */
         margin-right: 6em;
         margin-left: 6em;
     }
@@ -264,3 +285,24 @@ td, th {
     box-shadow: 0 4px 8px 0 #bf0c0c, 0 6px 20px 0 #ffc600;
 }
 
+#BigMacButtonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#oldSlideButton {
+    width: 50%;
+    height: 40px;
+    margin-right: 20px;
+}
+
+#newSlideButton {
+    width: 50%;
+    height: 40px;
+    margin-left: 20px;
+}
+
+#BigMacNutrition span {
+    width: 50%;
+
+}
