@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hackathon 2</title>
+    <title>Hackathon 3</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nick.css">
     <link rel="stylesheet" href="christian.css">
@@ -82,76 +82,60 @@
                 </div>
                 <div class="McFlurrey-Flavors-List">
                     <ul>
-                        <li class="Smores">Smores</li>
-                        <li class="Strawberry">Strawberry Cheesecake</li>
-                        <li class="Confetti">Confetti Cookie Dough</li>
-                        <li class="Oreo">Oreo</li>
-                        <li class="SKOR">SKOR</li>
-                        <li class="Smarties">Smarties</li>
+                        <li class="Smores"><button id="Smores">S'mores</button></li>
+                        <li class="Strawberry"><button id="Strawberry">Strawberry</button></li>
+                        <li class="Confetti"><button id="Confetti">Confetti</button></li>
+                        <li class="Oreo"><button id="Oreo">Oreo</button></li>
+                        <li class="SKOR"><button id="SKOR">SKOR</button></li>
+                        <li class="Smarties"><button id="Smarties">Smarties</button></li>
                     </ul>
                 </div>
             </div>
             <div class="McFlurrey-Ingredients">
-                <div class="Smores-info">
-                    <p id="Smores-info">
-                        <h4>Smores Ingredients</h4>
-                        <p>Graham-style crumbs: Enriched wheat flour, Sugars (sugar, brown sugar, honey), 
-                            Palm oil, Water, Wheat bran, Natural flavour, Baking soda, Salt, Wheat germ, Soy 
-                            lecithin. Dehydrated mini marshmallows: Sugars (sugar, corn syrup), Modified corn 
-                            starch, Gelatin, Natural flavour.</p>
-                    </p>
+                <div class="McFlurrey-Placeholder" id="McFlurrey-Placeholder">               
+                    <h4 class="Mcflurrey-Title">Click a flavor to see the ingredients.</h4>
                 </div>
-                <div class="Strawberry-info">
-                    <p>
-                        <h4>Strawberry Cheesecake Ingredients</h4>
-                        <p>Confectionery Pieces: Rice flour, Sugar, Palm oil, Water, Glycerin, Beet powder, 
-                            Carotene, Carnauba wax, Cellulose gum, Corn starch, Ethanol, Glucose solids, Gum arabic, 
-                            Spirulina extract, Tapioca starch, Xanthan gum. Cookie Dough: Enriched wheat flour, Sugars 
-                            (brown sugar, invert sugar, sugar, organic evaporated cane syrup, refiners molasses),                                 
-                            Palm oil, Salt, Organic tapioca starch. Made with the same equipment as, and may come into 
-                            contact with, ingredients that contain MILK, SOY, WHEAT and TREE NUTS (ALMONDS).</p>
-                    </p>
+                <div class="Smores-info" id="Smores-info">
+                    <h4 class="Mcflurrey-Title">S'mores</h4>
+                    <p class="McFlurrey-Calories">Calories: 570</p>
+                    <p class="Mcflurrey-Fat">Fat: 16g</p>
+                    <p class="Mcflurrey-Carbs">Carbohydrates: 95g</p>
+                    <p class="Mcflurrey-Protein">Protein: 12g</p>
                 </div>
-                <div class="Confetti-info">
-                    <p>
-                        <h4>Confetti Cookie Dough Ingredients</h4>
-                        <p>Confectionery Pieces: Rice flour, Sugar, Palm oil, Water, Glycerin, Beet powder,                                 
-                            Carotene, Carnauba wax, Cellulose gum, Corn starch, Ethanol, Glucose solids, Gum arabic, 
-                            Spirulina extract, Tapioca starch, Xanthan gum. Cookie Dough: Enriched wheat flour, Sugars 
-                            (brown sugar, invert sugar, sugar, organic evaporated cane syrup, refiners molasses), 
-                            Palm oil, Salt, Organic tapioca starch. Made with the same equipment as, and may come 
-                            into contact with, ingredients that contain MILK, SOY, WHEAT and TREE NUTS (ALMONDS).</p>
-                    </p>
+                <div class="Strawberry-info" id="Strawberry-info">
+                    <h4 class="Mcflurrey-Title">Strawberry Cheesecake</h4>
+                    <p class="McFlurrey-Calories">Calories: 710g</p>
+                    <p class="Mcflurrey-Fat">Fat: 22g</p>
+                    <p class="Mcflurrey-Carbs">Carbohydrates: 118g</p>
+                    <p class="Mcflurrey-Protein">Protein: 11g</p>
                 </div>
-                <div class="Oreo-info">
-                    <p>
-                        <h4>Oreo Ingredients</h4>
-                        <p>Sugars (sugar, golden sugar and/or glucose-fructose), Wheat flour, Modified palm oil, 
-                            Vegetable oil, Cocoa, Corn and/or Wheat Starch, Salt, Soy lecithin, Baking soda, 
-                            Ammonium bicarbonate, Monocalcium phosphate, Unsweetened chocolate, Natural flavours, 
-                            Artificial flavour. Made with the same equipment as, and may come into contact with, 
-                            ingredients that contain MILK, SOY, WHEAT, and TREE NUTS (ALMONDS).</p>
-                    </p>
+                <div class="Confetti-info" id="Confetti-info">
+                    <h4 class="Mcflurrey-Title">Confetti Cookie Dough</h4>
+                    <p class="McFlurrey-Calories">Calories: 540</p>
+                    <p class="Mcflurrey-Fat">Fat: 19g</p>
+                    <p class="Mcflurrey-Carbs">Carbohydrates: 96g</p>
+                    <p class="Mcflurrey-Protein">Protein: 11g</p>
                 </div>
-                <div class="SKOR-info">
-                    <p>
-                        <h4>SKOR Ingredients</h4>
-                        <p>Sugars (sugar, golden sugar and/or glucose-fructose), Wheat flour, Modified palm oil, 
-                            Vegetable oil, Cocoa, Corn and/or Wheat Starch, Salt, Soy lecithin, Baking soda, 
-                            Ammonium bicarbonate, Monocalcium phosphate, Unsweetened chocolate, Natural flavours, 
-                             Artificial flavour. Made with the same equipment as, and may come into contact with, 
-                             ingredients that contain MILK, SOY, WHEAT, and TREE NUTS (ALMONDS).</p>
-                    </p>
+                <div class="Oreo-info" id="Oreo-info">
+                    <h4 class="Mcflurrey-Title">Oreo</h4>
+                    <p class="McFlurrey-Calories">Calories: 570</p>
+                    <p class="Mcflurrey-Fat">Fat: 19g</p>
+                    <p class="Mcflurrey-Carbs">Carbohydrates: 90g</p>
+                    <p class="Mcflurrey-Protein">Protein: 11g</p>
                 </div>
-                <div class="Smarties-info">
-                    <p>
-                        <h4>Smarties Ingredients</h4>
-                        <p>Sugars (sugar, golden sugar and/or glucose-fructose), Wheat flour, Modified palm oil, 
-                            Vegetable oil, Cocoa, Corn and/or Wheat Starch, Salt, Soy lecithin, Baking soda, 
-                            Ammonium bicarbonate, Monocalcium phosphate, Unsweetened chocolate, Natural flavours, 
-                            Artificial flavour. Made with the same equipment as, and may come into contact with, 
-                            ingredients that contain MILK, SOY, WHEAT, and TREE NUTS (ALMONDS).</p>
-                    </p>
+                <div class="SKOR-info" id="SKOR-info">
+                    <h4 class="Mcflurrey-Title">SKOR</h4>
+                    <p class="McFlurrey-Calories">Calories: 540</p>
+                    <p class="Mcflurrey-Fat">Fat: 21g</p>
+                    <p class="Mcflurrey-Carbs">Carbohydrates: 81g</p>
+                    <p class="Mcflurrey-Protein">Protein: 10g</p>
+                </div>
+                <div class="Smarties-info" id="Smarties-info">
+                    <h4 class="Mcflurrey-Title">Smarties</h4>
+                    <p class="McFlurrey-Calories">Calories: 600</p>
+                    <p class="Mcflurrey-Fat">Fat: 17g</p>
+                    <p class="Mcflurrey-Carbs">Carbohydrates: 99g</p>
+                    <p class="Mcflurrey-Protein">Protein: 12g</p>
                 </div>
             </div>
         </div>
@@ -308,6 +292,7 @@
     </section>
 
   </main>
-  <script src="tysen-script.js" ></script>
+  <script src="scripts/tysen-script.js" ></script>
+  <script src="scripts/nick-script.js" ></script>
 </body>
 </html>
