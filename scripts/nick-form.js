@@ -15,6 +15,8 @@ function validate(e) {
     hideErrors()
     if(formHasErrors()) {
         e.preventDefault();
+    } else {
+        alert("Thank you for your feedback!")
     }
 }
 
