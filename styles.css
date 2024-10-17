@@ -290,13 +290,13 @@ td, th {
     justify-content: center;
 }
 
-#oldSlideButton {
+#BigMacOldSlideButton {
     width: 50%;
     height: 40px;
     margin-right: 20px;
 }
 
-#newSlideButton {
+#BigMacNewSlideButton {
     width: 50%;
     height: 40px;
     margin-left: 20px;
@@ -305,4 +305,130 @@ td, th {
 #BigMacNutrition span {
     width: 50%;
 
+}
+
+#BigMacFormButtonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#BigMacFeedbackInputTextArea {
+    width: 500px;
+    height: 150px;
+    resize: none;
+    border-radius: 10px;
+    border-color: 2px solid gray;
+}
+
+.BigMacFeedbackFormHeader {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: x-large;
+}
+
+#BigMacForm {
+    display: grid;
+}
+
+.BigMacNameInputFormWrapper {
+    display: grid;
+    grid-template-areas: 
+    'BigMacNameInputFormLabel BigMacNameInputForm'
+    'BigMacNameInputFormError BigMacNameInputFormError';
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+.BigMacPhoneNumberInputWrapper {
+    display: grid;
+    grid-template-areas: 
+    'BigMacPhoneNumberInputLabel BigMacPhoneNumberInput'
+    'BigMacPhoneNumberInputError BigMacPhoneNumberInputError';
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+.BigMacIngredientsInputWrapper {
+    display: grid;
+    grid-template-areas: 
+    'BigMacIngredientsInputLabel BigMacIngredientsInput'
+    'BigMacIngredientsInputError BigMacIngredientsInputError';
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+.BigMacFeedbackInputWrapper {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1em;
+}
+
+.BigMacFeedbackButtonWrapper {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#BigMacFeedbackSubmitButton {
+    width: 80px;
+    margin-right: 1em;
+}
+
+#BigMacFeedbackResetButton {
+    width: 80px;
+    margin-left: 1em;
+}
+
+#BigMacNameInputForm {
+    grid-area: BigMacNameInputForm;
+}
+
+#BigMacNameInputFormLabel {
+    grid-area: BigMacNameInputFormLabel;
+    margin-right: 5px;
+}
+
+#BigMacNameInputFormError {
+    grid-area: BigMacNameInputFormError;
+    margin-right: auto;
+    margin-left: auto;
+    color: red;
+    font-weight: 500;
+}
+
+#BigMacPhoneNumberInput {
+    grid-area: BigMacPhoneNumberInput;
+}
+
+#BigMacPhoneNumberInputLabel {
+    grid-area: BigMacPhoneNumberInputLabel;
+    margin-right: 5px;
+}
+
+#BigMacPhoneNumberInputError {
+    grid-area: BigMacPhoneNumberInputError;
+    margin-right: auto;
+    margin-left: auto;
+    color: red;
+    font-weight: 500;
+}
+
+#BigMacIngredientsInput {
+    grid-area: BigMacIngredientsInput;
+}
+
+#BigMacIngredientsInputLabel {
+    grid-area: BigMacIngredientsInputLabel;
+    margin-right: 5px;
+}
+
+#BigMacIngredientsInputError {
+    grid-area: BigMacIngredientsInputError;
+    margin-right: auto;
+    margin-left: auto;
+    color: red;
+    font-weight: 500;
 }
