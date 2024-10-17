@@ -76,13 +76,14 @@
 .McFlurrey-Flavors-List button {
     background-color: #DA291C;
     color: #fff;
-    border: 3px #DA291C solid;
+    border: 3px #DA291C outset;
     border-radius: 15px;
     display: block;
     transition: all 100ms ease;
     height: 50px;
     width: 200px;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
 .McFlurrey-Flavors-List button:hover {
@@ -173,6 +174,55 @@
     border: 3px #DA291C solid;
     border-radius: 15px;
     display: none;
+}
+
+#McFlurrey-formButton {
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: #DA291C;
+    color: #fff;
+    border: 3px #DA291C outset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#McFlurrey-formButton:hover {
+    background-color: #FFC72C;
+    color: #DA291C;
+    font-weight: bold;
+}
+
+#McFlurrey-Form {
+    position: static;
+    display: none;
+    width: 30%;
+    border: 5px lightgrey outset;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Mcflurrey-Fields {
+    margin-top: 1em;
+    text-align: left;
+}
+
+#McFlurrey-leastFavorite {
+    cursor: pointer;
+}
+
+#McFlurrey-feedback-container {
+    display: none;
+}
+
+.McFlurrey-formButton {
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.McFlurrey_error {
+    display: none;
+    font-style: oblique;
+    color: red;
 }
 
 @media (max-width: 640px) {

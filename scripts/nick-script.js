@@ -16,6 +16,12 @@ function load() {
 
     let smarties = document.getElementById("Smarties");
     smarties.addEventListener("click", displaySmarties);
+
+    document.getElementById("McFlurrey-formButton").addEventListener("click", displayForm)
+}
+
+function displayForm() {
+    document.getElementById("McFlurrey-Form").style.display = "block"
 }
 
 function displaySmores() {

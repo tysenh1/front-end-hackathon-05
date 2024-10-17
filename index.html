@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hackathon 3</title>
+    <title>Hackathon 4</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nick.css">
     <link rel="stylesheet" href="christian.css">
@@ -140,6 +140,41 @@
                 </div>
             </div>
         </div>
+        <button id="McFlurrey-formButton">Show Feedback</button>
+        <form id="McFlurrey-Form" action="#">
+
+            <h1>Please Share Your Thoughts</h1>
+
+            <div id="McFlurrey-email-container" class="Mcflurrey-Fields">
+                <label for="username">Email/Phone:</label>
+                <input type="text" id="username" name="username" maxlength="50" value="" />					
+                <span class="McFlurrey_error" id="username_error">* Please enter your email or phone number.</span>
+            </div>
+
+            <div id="McFlurrey-flavor-container" class="Mcflurrey-Fields">
+                <label for="McFlurrey-leastFavorite">Least Favorite Flavor:</label>
+                <select name="McFlurrey-leastFavorite" id="McFlurrey-leastFavorite">
+                    <option value="">Select Your Least Favorite Flavor</option>
+                    <option value="Smores">Smores</option>
+                    <option value="Strawberry Cheesecake">Strawberry Cheesecake</option>
+                    <option value="Confetti Cookie Dough">Confetti Cookie Dough</option>
+                    <option value="Oreo">Oreo</option>
+                    <option value="SKOR">SKOR</option>
+                    <option value="Smarties">Smarties</option>
+                </select>
+                <span class="McFlurrey_error" id="flavor_error">* Please select your least favorite flavor.</span>
+            </div>
+
+            <div id="McFlurrey-feedback-container" class="Mcflurrey-Fields">
+                <label for="feedback">What do you not like about this flavor?</label>
+				<textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+            </div>
+
+            <button id="McFlurrey-back" class="McFlurrey-formButton">Back</button>
+            <button type="submit" id="McFlurrey-submit" class="McFlurrey-formButton">Submit</button>
+        </form>
+        <script src="scripts/nick-script.js"></script>
+        <script src="scripts/nick-form.js"></script>
     </section>
 
     <section id="McCafe">
@@ -278,6 +313,5 @@
 
   </main>
   <script src="scripts/tysen-script.js" ></script>
-  <script src="scripts/nick-script.js" ></script>
 </body>
 </html>
