@@ -107,73 +107,108 @@
     font-size: 1.2em;
 }
 
-.McFlurrey-Placeholder {
+#McFlurrey-Placeholder {
     position: absolute;
     width: 400px;
-    background-color: #FFC72C;
-    color: #000;
-    border: 3px #DA291C solid;
+    background-color: #DA291C;
+    border: 5px #DA291C outset;
     border-radius: 15px;
+}
+
+#McFlurrey-Placeholder h4 {
+    color: white;
+    font-size: 1.5em;
 }
 
 .Smores-info {
     position: absolute;
     width: 400px;
-    background-color: #FFC72C;
+    background-color: white;
     color: #000;
-    border: 3px #DA291C solid;
+    border: 5px #DA291C outset;
     border-radius: 15px;
     display: none;
+}
+
+#Smores-info h4 {
+    font-size: 1.5em;
+    margin-bottom: -0.2em;
 }
 
 .Strawberry-info {
     position: absolute;
     width: 400px;
-    background-color: #FFC72C;
+    background-color: white;
     color: #000;
-    border: 3px #DA291C solid;
+    border: 5px #DA291C outset;
     border-radius: 15px;
     display: none;
 }
 
+#Strawberry-info h4 {
+    font-size: 1.5em;
+    margin-bottom: -0.2em;
+}
+
+
 .Confetti-info {
     position: absolute;
     width: 400px;
-    background-color: #FFC72C;
+    background-color: white;
     color: #000;
-    border: 3px #DA291C solid;
+    border: 5px #DA291C outset;
     border-radius: 15px;
     display: none;
+}
+
+#Confetti-info h4 {
+    font-size: 1.5em;
+    margin-bottom: -0.2em;
 }
 
 .Oreo-info {
     position: absolute;
     width: 400px;
-    background-color: #FFC72C;
+    background-color: white;
     color: #000;
-    border: 3px #DA291C solid;
+    border: 5px #DA291C outset;
     border-radius: 15px;
     display: none;
+}
+
+#Oreo-info h4 {
+    font-size: 1.5em;
+    margin-bottom: -0.2em;
 }
 
 .SKOR-info {
     position: absolute;
     width: 400px;
-    background-color: #FFC72C;
+    background-color: white;
     color: #000;
-    border: 3px #DA291C solid;
+    border: 5px #DA291C outset;
     border-radius: 15px;
     display: none;
+}
+
+#SKOR-info h4 {
+    font-size: 1.5em;
+    margin-bottom: -0.2em;
 }
 
 .Smarties-info {
     position: absolute;
     width: 400px;
-    background-color: #FFC72C;
+    background-color: white;
     color: #000;
-    border: 3px #DA291C solid;
+    border: 5px #DA291C outset;
     border-radius: 15px;
     display: none;
+}
+
+#Smarties-info h4 {
+    font-size: 1.5em;
+    margin-bottom: -0.2em;
 }
 
 #McFlurrey-formButton {
