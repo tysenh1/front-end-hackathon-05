@@ -36,7 +36,20 @@ function showError(formField, errorId, errorFlag) {
 }
 
 function formHasErrors() {
-
+    let errorFlag = false
+    let regexEmail = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g);
+    let regexPhone = new RegExp(/^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/)
+    let username = document.getElementById("username").value;
+    if(!regexEmail.test(username) && !regexPhone.test(username)) {
+        showError("username", "username_error", errorFlag);
+        errorFlag=true;
+    }
+    let leastFavorite = document.getElementById("McFlurrey-leastFavorite").value;
+    if(leastFavorite == "" || leastFavorite == null) {
+        showError("McFlurrey-leastFavorite", "leastFavorite_error", errorFlag);
+        errorFlag=true;
+    }
+    return errorFlag;
 }
 
 function feedback() {
