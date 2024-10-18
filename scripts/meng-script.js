@@ -1,8 +1,6 @@
-document.addEventListener("DOMContentLoaded", addButton);
+document.addEventListener("DOMContentLoaded", addButton(), addColumn(), hiddenFeedback());
 
 function addButton(){
-    const button = document.createElement("button");
-    button.innerHTML =  "Add to Cart";
     const pricerows = document.querySelectorAll('.mochaprice table tr');
     for (let i=1; i < pricerows.length; i++) {
         let price = pricerows[i].getElementsByTagName('td')[2];
@@ -41,7 +39,7 @@ function addColumn() {
     }   
 }
 
-addColumn();
+
 
 
 function updateOrder(row) {
@@ -59,3 +57,22 @@ function updatePrice(row, orderAmount) {
     totalPriceCell.innerHTML ='$' + totalPrice.toFixed(2);
 }
 
+function hiddenFeedback(){
+    document.getElementById("cafeform").style.display="none"
+}
+
+
+document.getElementById("cfeedback").addEventListener("click", showFeedback)
+
+function showFeedback(){
+    if(document.getElementById("cafeform").style.display==="none"){
+        document.getElementById("cafeform").style.display="block";
+        document.getElementById("feedbackMessage").style.display="block";
+        document.getElementById("feedbackMessage").innerText = "Click again to close feedback"
+        document.getElementById("cfeedback").insertAdjacentElement("afterend", text)
+    }
+    else{
+        document.getElementById("cafeform").style.display="none";
+        document.getElementById("feedbackMessage").style.display="none";
+    }
+}

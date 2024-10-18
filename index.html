@@ -230,6 +230,38 @@
                 target="_blank" rel="noreferrer"> sugar levels of other drinks</a>   
                 </div>
         </div> 
+        <div >
+            <div class="cafefeedback">
+            <button id="cfeedback" >Show feedback</button>
+            <P id="feedbackMessage"></P>
+            </div>
+            <form id="cafeform">
+                <h1>Your Feedback on Our Cafe</h1>
+                <fieldset>
+                    <legend>How would you rate McCafe</legend>
+                <ul>
+                    <li><input type="radio" id="poor" name="rate" value="poor"><label for="poor">Poor</label></li>
+                    <li><input type="radio" id="fair" name="rate" value="fair"><label for="fair">Fair</label></li>
+                    <li><input type="radio" id="good" name="rate" value="good"><label for="good">Good</label></li>
+                </ul>
+            </fieldset>                
+                <span id="rate_error" class="cafeerror">* Please choose rating.</span>
+                       
+                <label for="product">Please select your preferred product</label>
+                <select id="product" name="product">
+                    <option value="">Select here</option>
+                    <option value="he/him">McCafe Mocha</option>
+                    <option value="she/her">White Chocolate Mocha </option>
+                </select>
+                <span id="product_error" class="cafeerror">* Please select an item.</span>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" size="30" placeholder="Enter your email">
+                <span id="email_error" class="cafeerror">* Please enter valid email.</span>
+
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
         <div class="mochaprice">
             <h3>Price</h3>      
                 <table>
