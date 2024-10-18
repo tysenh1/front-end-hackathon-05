@@ -49,8 +49,12 @@ function formHasErrors() {
     // Full Name validation
     let fullname = document.getElementById("fullname").value;
     if (fullname.trim() === "") {
-        showError("fullname", "fullname_error");
-        errorFlag = true;
+        showError("fullname", "fullname_error", errorFlag);
+        errorFlag = true; // Set error flag if there's an error
+    } else if (/\d/.test(fullname)) { // Check for numeric characters
+        showError("fullname", "fullname_error", errorFlag);
+        document.getElementById("fullname_error").innerText = "* Full name cannot contain numbers.";
+        errorFlag = true; // Set error flag if there's an error
     }
 
     // McFlurry rating validation (radio buttons)
