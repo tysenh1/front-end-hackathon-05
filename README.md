@@ -16,7 +16,8 @@ Hackthon project
 
 -   Worked creating McDonald's History on the webpage and created header.
 -   Worked on creating the style sheet css file for the header and the history section of the webpage.
--   Add JavaScript codes under the history section.
+-   Add JavaScript codes under the history section and had a simple script that hovers whenever you click the next and/or previous button.
+-   Add JavaScript code containing form after the history section.
 
 ### Meng Wang:
 
