@@ -1,6 +1,4 @@
 
-  
-  /* Header Styles */
   header {
     background-color: #FFCC00;
     text-align: center;
@@ -18,7 +16,6 @@
     margin: 0px;
   }
   
-  /* Navigation Styles */
   nav {
     background-color: #FFCC00;
     padding: 10px;
@@ -109,7 +106,6 @@
     margin-top: 8px;
   }
 
-
 #McDonaldsInfo {
   background-color: #f5f5f5;
   border: 2px solid #d32f2f; 
@@ -119,14 +115,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 #McDonaldsHistory {
   color: #d32f2f;
   font-size: 24px; 
   text-align: center; 
   margin-bottom: 20px; 
 }
-
 
 #McDonaldsTimeline h3,
 #McDonaldsFacts h3 {
@@ -135,14 +129,12 @@
   margin-top: 15px; 
 }
 
-
 #McDonaldsHistoryList,
 #McDonaldsFactList {
   list-style-type: disc; 
   padding-left: 20px;
 }
 
-/* Styles for buttons */
 button {
   background-color: #d32f2f;
   color: white; 
@@ -163,4 +155,117 @@ button:hover {
   margin-top: 10px;
 }
 
-  
+form {
+  max-width: 600px;
+  margin: 1em auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #d32f2f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #CC0000;
+  margin-bottom: 20px;
+}
+
+.survey-fields {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 18px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.survey-fields div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.survey-fields div label {
+  margin-right: 15px;
+}
+
+button.survey-form-button {
+  display: inline-block;
+  background-color: #d32f2f; 
+  color: white;
+  text-align: center;
+  padding: 5px 10px; 
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  max-width: 150px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+button.survey-form-button:hover {
+  background-color: #b71c1c;
+}
+
+.survey_error {
+  display: block;
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+#survey-form-button {
+  display: inline-block;
+  background-color: #d32f2f; 
+  color: white;
+  text-align: center;
+  padding: 5px 10px; 
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  max-width: 150px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.survey-button-container {
+  text-align: left;
+}
+
+#survey-form-button:hover {
+  background-color: #b71c1c;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .survey-fields div {
+    flex-direction: column;
+  }
+
+  button.survey-form-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

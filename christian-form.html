@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+    <link rel="stylesheet" href="christian.css">
+</head>
+
+<body>
+    <main>
+        
+<section>
+    <button id="survey-form-button">Click to take the Survey</button>
+    <form id="survey-form" action="#">
+        <h1>Please answer our quick survey.</h1>
+        
+        <div id="survey-fullname-container" class="survey-fields">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" maxlength="35" value="" />
+            <span class="survey_error" id="fullname_error" style="display:none;">* Please enter your Full name.</span>
+        </div>
+    
+        <div id="survey-mcflurry-container" class="survey-fields">
+            <label>How would you rate the McFlurry?</label>
+            <div>
+                <input type="radio" id="mcflurry-excellent" name="mcflurry-rating" value="excellent" />
+                <label for="mcflurry-excellent">Excellent</label>
+                
+                <input type="radio" id="mcflurry-good" name="mcflurry-rating" value="good" />
+                <label for="mcflurry-good">Good</label>
+                
+                <input type="radio" id="mcflurry-average" name="mcflurry-rating" value="average" />
+                <label for="mcflurry-average">Average</label>
+                
+                <input type="radio" id="mcflurry-poor" name="mcflurry-rating" value="poor" />
+                <label for="mcflurry-poor">Poor</label>
+            </div>
+            <span class="survey_error" id="mcflurry_error" style="display:none;">* Please rate the McFlurry.</span>
+        </div>
+    
+        <div id="survey-mccafe-container" class="survey-fields">
+            <label>How would you rate the McCafé?</label>
+            <div>
+                <input type="radio" id="mccafe-excellent" name="mccafe-rating" value="excellent" />
+                <label for="mccafe-excellent">Excellent</label>
+                
+                <input type="radio" id="mccafe-good" name="mccafe-rating" value="good" />
+                <label for="mccafe-good">Good</label>
+                
+                <input type="radio" id="mccafe-average" name="mccafe-rating" value="average" />
+                <label for="mccafe-average">Average</label>
+                
+                <input type="radio" id="mccafe-poor" name="mccafe-rating" value="poor" />
+                <label for="mccafe-poor">Poor</label>
+            </div>
+            <span class="survey_error" id="mccafe_error" style="display:none;">* Please rate the McCafé.</span>
+        </div>
+    
+        <div id="survey-bigmac-container" class="survey-fields">
+            <label>How would you rate the Big Mac?</label>
+            <div>
+                <input type="radio" id="bigmac-excellent" name="bigmac-rating" value="excellent" />
+                <label for="bigmac-excellent">Excellent</label>
+                
+                <input type="radio" id="bigmac-good" name="bigmac-rating" value="good" />
+                <label for="bigmac-good">Good</label>
+                
+                <input type="radio" id="bigmac-average" name="bigmac-rating" value="average" />
+                <label for="bigmac-average">Average</label>
+                
+                <input type="radio" id="bigmac-poor" name="bigmac-rating" value="poor" />
+                <label for="bigmac-poor">Poor</label>
+            </div>
+            <span class="survey_error" id="bigmac_error" style="display:none;">* Please rate the Big Mac.</span>
+        </div>
+        <button id="survey-back" class="survey-form-button">Back</button>
+        <button type="submit" id="survey-submit" class="survey-form-button">Submit Survey</button>
+    </form>
+</section>
+<br>
+<a id="survey-form-button" href="index.html" class="survey-form-button">Back to the Website</a>
+<script src="scripts/christian-form.js"></script>
+
+</main>
+</body>
