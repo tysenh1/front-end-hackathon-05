@@ -327,8 +327,46 @@
             </ul>
         </div>
         <span id="BigMacButtonWrapper">
-            <button id="oldSlideButton">Previous Slide</button>
-            <button id="newSlideButton">Next Slide</button>
+            <button id="BigMacOldSlideButton">Previous Slide</button>
+            <button id="BigMacNewSlideButton">Next Slide</button>
+        </span>
+
+        <div id="BigMacFeedbackForm">
+            <form method="POST" id="BigMacForm" action="https://httpbin.org/post">
+                <h3 class="BigMacFeedbackFormHeader">Feedback Form</h3>
+                <span class="BigMacNameInputFormWrapper">
+                    <label for="BigMacNameInputForm" id="BigMacNameInputFormLabel">Name: </label>
+                    <input id="BigMacNameInputForm" type="text" name="bigMacName"/>
+                    <p id="BigMacNameInputFormError">Please enter a name.</p>
+                </span>
+                
+                <span class="BigMacPhoneNumberInputWrapper">
+                    <label for="BigMacPhoneNumberInput" id="BigMacPhoneNumberInputLabel">Phone Number: </label>
+                    <input id="BigMacPhoneNumberInput" type="text" name="bigMacPhoneNumber"/>
+                    <p id="BigMacPhoneNumberInputError">Please enter a valid phone number.</p>
+                </span>
+
+                <span class="BigMacIngredientsInputWrapper">
+                    <label for="BigMacIngredientsInput" id="BigMacIngredientsInputLabel">What ingredient would you add/remove to the Big Mac?: </label>
+                    <input id="BigMacIngredientsInput" type="text" name="bigMacIngredients"/>
+                    <p id="BigMacIngredientsInputError">Please answer the question.</p>
+                </span>
+
+                <span class="BigMacFeedbackInputWrapper">
+                    <textarea id="BigMacFeedbackInputTextArea" placeholder="Any additional feedback? (Optional)" name="bigMacFeedback"></textarea>
+                </span>
+
+                <span class="BigMacFeedbackButtonWrapper">
+                    <button type="submit" id="BigMacFeedbackSubmitButton">Submit</button>
+                    <button type="reset" id="BigMacFeedbackResetButton">Reset</button>
+                </span>
+                
+
+            </form>
+        </div>
+
+        <span id="BigMacFormButtonWrapper">
+            <button id="BigMacToggleFormButton"></button>
         </span>
         
     </section>

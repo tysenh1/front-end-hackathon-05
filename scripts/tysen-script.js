@@ -3,25 +3,122 @@ const [
     bigMacNutrition,
     bigMacFacts,
     oldSlideButton,
-    // newSlideButton,
+    toggleFeedbackFormButton,
+    BigMacFeedbackSubmitButton,
+    BigMacFeedbackResetButton,
+    BigMacFeedbackForm,
+
+    bigMacNameError,
+    bigMacPhoneNumberError,
+    bigMacIngredientsError
 ] = [
     document.getElementById('BigMacHistory'),
     document.getElementById('BigMacNutrition'),
     document.getElementById('BigMacFacts'),
-    document.getElementById('oldSlideButton'),
-    // document.getElementById('newSlideButton'),
+    document.getElementById('BigMacOldSlideButton'),
+    document.getElementById('BigMacToggleFormButton'),
+    document.getElementById('BigMacFeedbackSubmitButton'),
+    document.getElementById('BigMacFeedbackResetButton'),
+    document.getElementById('BigMacFeedbackForm'),
+    document.getElementById('BigMacNameInputFormError'),
+    document.getElementById('BigMacPhoneNumberInputError'),
+    document.getElementById('BigMacIngredientsInputError')
 ]
 
-let newSlideButton = document.getElementById('newSlideButton')
+let newSlideButton = document.getElementById('BigMacNewSlideButton')
 
 let currentSlide = 'bigMacHistory'
 
 oldSlideButton.addEventListener('click', () => {oldSlide()})
 newSlideButton.addEventListener('click', () => {newSlide()})
+toggleFeedbackFormButton.addEventListener('click', () => {toggleBigMacForm()})
+BigMacFeedbackSubmitButton.addEventListener('click', (e) => {validateBigMacForm(e)})
+BigMacFeedbackResetButton.addEventListener('click', () => {resetForm()})
+
+function BigMacLoad() {
+    toggleFeedbackFormButton.innerHTML = 'Show Feedback Form';
+    BigMacFeedbackForm.style.display = 'none';
+    hideErrors();
+}
+
+function hideErrors() {
+    bigMacNameError.style.display = 'none';
+    bigMacPhoneNumberError.style.display = 'none';
+    bigMacIngredientsError.style.display = 'none';
+}
+
+let isBigMacFormOpen = false;
+
+function toggleBigMacForm() {
+    if (!isBigMacFormOpen) {
+        BigMacFeedbackForm.style.display = 'block';
+        toggleFeedbackFormButton.innerHTML = 'Hide Feedback Form';
+        isBigMacFormOpen = true;
+    } else {
+        BigMacFeedbackForm.style.display = 'none';
+        toggleFeedbackFormButton.innerHTML = 'Show Feedback Form';
+        isBigMacFormOpen = false;
+    }
+}
+
+function resetForm() {
+    if (confirm('Are you sure you want to reset the form?')) {
+        hideErrors();
+        return true;
+    }
+    return false;
+}
+
+function validateBigMacForm(e) {
+    hideErrors();
+    if (bigMacFormHasErrors()) {
+        e.preventDefault();
+        return false;
+    }
+    return true;
+}
+
+function bigMacFormHasErrors() {
+
+    let errorFlag = false;
+
+    const inputFields = [
+        'BigMacNameInputForm',
+        'BigMacPhoneNumberInput',
+        'BigMacIngredientsInput'
+    ]
+
+    for (let input of inputFields) {
+        if (input == 'BigMacPhoneNumberInput') {
+            let phoneRegExp = new RegExp(/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g)
+            let phoneNumber = document.getElementById(input)
+            if (phoneNumber.value == '' || !phoneRegExp.test(phoneNumber.value)) {
+                bigMacPhoneNumberError.style.display = 'block';
+                if (!errorFlag) {
+                    phoneNumber.focus();
+                    phoneNumber.select();
+                }
+                errorFlag = true;
+            }
+        } else {
+            let inputElement = document.getElementById(input)
+            let inputElementError = document.getElementById(input + 'Error')
+            if (inputElement.value == '' || inputElement == null) {
+                inputElementError.style.display = 'block';
+                if (!errorFlag) {
+                    inputElement.focus();
+                    inputElement.select();
+                }
+                errorFlag = true;
+            }
+        }
+    }
+    return errorFlag;
+}
 
 let counter = 1
 
-function oldSlide(currentSlide) {
+function oldSlide() {
     if (counter == 0) {
         console.log(counter)
         counter = 2;
@@ -118,3 +215,5 @@ for (let fact of bigMacFactList) {
     factLi.innerHTML = fact
     bigMacFactListElement.appendChild(factLi)
 }
+
+BigMacLoad();
