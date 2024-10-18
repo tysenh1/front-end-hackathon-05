@@ -1,6 +1,4 @@
 
-  
-  /* Header Styles */
   header {
     background-color: #FFCC00;
     text-align: center;
@@ -18,7 +16,6 @@
     margin: 0px;
   }
   
-  /* Navigation Styles */
   nav {
     background-color: #FFCC00;
     padding: 10px;
@@ -109,7 +106,6 @@
     margin-top: 8px;
   }
 
-
 #McDonaldsInfo {
   background-color: #f5f5f5;
   border: 2px solid #d32f2f; 
@@ -119,14 +115,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 #McDonaldsHistory {
   color: #d32f2f;
   font-size: 24px; 
   text-align: center; 
   margin-bottom: 20px; 
 }
-
 
 #McDonaldsTimeline h3,
 #McDonaldsFacts h3 {
@@ -135,14 +129,12 @@
   margin-top: 15px; 
 }
 
-
 #McDonaldsHistoryList,
 #McDonaldsFactList {
   list-style-type: disc; 
   padding-left: 20px;
 }
 
-/* Styles for buttons */
 button {
   background-color: #d32f2f;
   color: white; 
@@ -163,4 +155,98 @@ button:hover {
   margin-top: 10px;
 }
 
-  
+
+/* Basic form layout and container styling */
+form {
+  max-width: 600px;
+  margin: 1em auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #d32f2f; /* Matches the theme colors */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif; /* Consistent font family */
+}
+
+/* Form heading */
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #CC0000; /* Consistent color scheme */
+  margin-bottom: 20px;
+}
+
+/* Form fields */
+.survey-fields {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333; /* Dark color for better readability */
+  font-size: 18px;
+}
+
+/* Input text field */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.survey-fields div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.survey-fields div label {
+  margin-right: 15px;
+}
+
+/* Styling submit buttons */
+button.survey-form-button {
+  background-color: #d32f2f; /* Matches your existing button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 48%;
+}
+
+button.survey-form-button:hover {
+  background-color: #b71c1c; /* Darker shade on hover */
+}
+
+/* Error message styling */
+.survey_error {
+  display: block; /* Hidden by default */
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .survey-fields div {
+    flex-direction: column;
+  }
+
+  button.survey-form-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
