@@ -12,3 +12,44 @@
 .mochaprice button:hover{
     background-color: #1ca1da; 
 }
+
+#cafeform{
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    padding: 30px;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 8px;
+}
+
+#rate_error, #product_error, #email_error{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: red;
+    display: block;
+}
+
+.cafefeedback{
+    text-align: center;
+    margin-top: 15px;
+}
+#cfeedback{
+    font-size: 30px;
+    color: #fcf0d0;
+}
+
+#feedbackMessage{
+    font-size: 20px;
+    margin-top: 5px;
+    color: red;
+}
+
+#cafeproduct, #cafeemail{
+    display: block;
+    margin: 10px;
+}
+
+#caferadio {
+    margin-bottom: 10px;
+}

@@ -1,8 +1,11 @@
-document.addEventListener("DOMContentLoaded", addButton);
+document.addEventListener("DOMContentLoaded", function() {
+    addButton();
+    addColumn(); 
+    hiddenFeedback(); 
+    hideError();
+})
 
 function addButton(){
-    const button = document.createElement("button");
-    button.innerHTML =  "Add to Cart";
     const pricerows = document.querySelectorAll('.mochaprice table tr');
     for (let i=1; i < pricerows.length; i++) {
         let price = pricerows[i].getElementsByTagName('td')[2];
@@ -41,7 +44,7 @@ function addColumn() {
     }   
 }
 
-addColumn();
+
 
 
 function updateOrder(row) {
@@ -59,3 +62,73 @@ function updatePrice(row, orderAmount) {
     totalPriceCell.innerHTML ='$' + totalPrice.toFixed(2);
 }
 
+function hiddenFeedback(){
+    document.getElementById("cafeform").style.display="none"
+}
+
+
+document.getElementById("cfeedback").addEventListener("click", showFeedback)
+
+function showFeedback(){
+    if(document.getElementById("cafeform").style.display==="none"){
+        document.getElementById("cafeform").style.display="block";
+        document.getElementById("feedbackMessage").style.display="block";
+        document.getElementById("feedbackMessage").innerText = "Click again to close feedback"
+        document.getElementById("cfeedback").insertAdjacentElement("afterend", text)
+    }
+    else{
+        document.getElementById("cafeform").style.display="none";
+        document.getElementById("feedbackMessage").style.display="none";
+    }
+}
+
+function hideError(){
+    const cafeerror = document.getElementsByClassName("cafeerror")
+    for(i=0; i<cafeerror.length; i++ )
+    cafeerror[i].style.display="none";
+}
+
+document.getElementById("cafeform").addEventListener("submit", validate);
+function validate(e){
+    if (showErrors()){
+        e.preventDefault();
+        return false
+    };
+    return true;
+}
+
+function showErrors(){
+    let errorFlag=false;
+    if(!radioSelect()){
+        document.getElementById("rate_error").style.display = "block"
+        errorFlag=true
+    }
+    if(!dropdownSelect()){
+        document.getElementById("product_error").style.display = "block"
+        errorFlag=true
+    }
+    return errorFlag
+}
+
+function radioSelect(){
+    const rate = document.getElementsByName("caferate")
+    for(i=0; i<rate.length; i++){
+        if(rate[i].checked){
+            return true;
+        }
+    }
+    return false
+}
+
+function dropdownSelect(){
+    let product = document.getElementById("cafeproduct").value.trim()
+    return product !== ""
+}
+
+function clearErrors(errorId){
+    let error = document.getElementById(errorId);
+    error.style.display = "none";
+}
+
+document.getElementById("caferadio").addEventListener("input", function(){clearErrors("rate_error")})
+document.getElementById("cafeproduct").addEventListener("input", function(){clearErrors("product_error")})
