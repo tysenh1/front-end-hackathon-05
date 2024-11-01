@@ -12,7 +12,8 @@ const [
     bigMacPhoneNumberError,
     bigMacIngredientsError,
     bigMacMarvelDiv,
-    bigMacMarvelButton
+    bigMacMarvelButton,
+    bigMacMarvelSpan
 ] = [
     document.getElementById('BigMacHistory'),
     document.getElementById('BigMacNutrition'),
@@ -26,12 +27,15 @@ const [
     document.getElementById('BigMacPhoneNumberInputError'),
     document.getElementById('BigMacIngredientsInputError'),
     document.getElementById('bigMacMarvelDiv'),
-    document.getElementById('bigMacMarvelButton')
+    document.getElementById('bigMacMarvelButton'),
+    document.getElementById('bigMacMarvelSpan')
 ]
 
 let newSlideButton = document.getElementById('BigMacNewSlideButton')
 
 let currentSlide = 'bigMacHistory'
+
+let isMarvelFormOpen = false
 
 oldSlideButton.addEventListener('click', () => {oldSlide()})
 newSlideButton.addEventListener('click', () => {newSlide()})
@@ -44,6 +48,7 @@ function BigMacLoad() {
     toggleFeedbackFormButton.innerHTML = 'Show Feedback Form';
     BigMacFeedbackForm.style.display = 'none';
     hideErrors();
+    bigMacMarvelButton.innerHTML = 'Find Out!'
 }
 
 function hideErrors() {
@@ -222,18 +227,41 @@ for (let fact of bigMacFactList) {
 }
 
 async function toggleBigMacMarvelFacts() {
-    try {
-        const marvelFacts = await fetch('https://www.whenisthenextmcufilm.com/api')
-        .then((data) => {
-            return data.json()
-        })
-        .catch((error) => {throw new Error(error)})
+    if (!isMarvelFormOpen) {
+        try {
+            const marvelFacts = await fetch('https://www.whenisthenextmcufilm.com/api')
+            .then((data) => {
+                return data.json()
+            })
+            .catch((error) => {throw new Error(error)})
 
-        console.log(marvelFacts)
+            console.log(marvelFacts)
+
+            const { title: mainTitle, type: mainType, days_until: mainDaysUntil, overview: mainOverview, following_production: { days_until: secondDaysUntil, overview: secondOverview, type: secondType, title: secondTitle }} = marvelFacts
+
+            const pElement = document.createElement('p')
+            pElement.innerHTML = `The next ${mainType.toLowerCase()} in the MCU is ${mainTitle} which will be released in ${mainDaysUntil} days.`
+            bigMacMarvelSpan.appendChild(pElement)
+
+            const pElement2 = document.createElement('p')
+            pElement2.innerHTML = `After that, the next ${secondType.toLowerCase()} in the MCU is ${secondTitle} which will be released in ${secondDaysUntil} days.`
+            bigMacMarvelSpan.appendChild(pElement2)
+
+            bigMacMarvelButton.innerHTML = 'Hide Facts'
+
+            isMarvelFormOpen = true
+        }
+        
+        catch(error) {
+            console.error(error)
+        }
+
+    } else {
+        bigMacMarvelSpan.replaceChildren()
+        bigMacMarvelButton.innerHTML = 'Find Out!'
+        isMarvelFormOpen = false
     }
-    catch(error) {
-        console.error(error)
-    }
+    
     
 }
 

@@ -432,3 +432,9 @@ td, th {
     color: red;
     font-weight: 500;
 }
+
+#bigMacMarvelDiv span {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
