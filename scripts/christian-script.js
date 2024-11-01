@@ -95,3 +95,30 @@ for (let fact of mcdonaldsFactList) {
 // Initialize the display to show only the history section
 mcdonaldsTimeline.style.display = 'none';
 mcdonaldsFacts.style.display = 'none';
+
+
+// Hackathon 5
+// API Section
+const apiButton = document.getElementById('fetchApiData');
+const apiDataList = document.getElementById('apiDataList');
+
+async function fetchApiData() {
+    try {
+        const response = await fetch('https://run.mocky.io/v3/a9b655b4-4165-4db0-89c3-dfddc073bc0d');
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        const data = await response.json();
+
+        apiDataList.innerHTML = '';
+
+        data.forEach(post => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${post.title}`;
+            apiDataList.appendChild(listItem);
+        });
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+apiButton.addEventListener('click', fetchApiData);
