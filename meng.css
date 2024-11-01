@@ -30,11 +30,11 @@
     display: block;
 }
 
-.cafefeedback{
+.cafefeedback, #mccafe_api{
     text-align: center;
     margin-top: 15px;
 }
-#cfeedback{
+#cfeedback, #apibutton{
     font-size: 30px;
     color: #fcf0d0;
 }
@@ -52,4 +52,21 @@
 
 #caferadio {
     margin-bottom: 10px;
+}
+
+#randomrecipe{
+    font-size: 20px;
+    color: red;
+}
+
+#capiimg {
+    display: block;         
+    margin: 0 auto;        
+    max-width: 400px;     
+    height: auto;        
+    text-align: center;     
+}
+#changerecipe{
+    font-size: 15px;
+    color: #fcf0d0;
 }
