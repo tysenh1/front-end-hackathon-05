@@ -146,3 +146,46 @@ function showRecipe(){
 }
 document.getElementById("apibutton").addEventListener("click", showRecipe)
 
+async function fetchData() {
+    try{
+        const resp = await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`);
+        if (!resp.ok){
+            throw new Error(`HTTP error! status: ${resp.status}`);
+        }
+        const data = await resp.json();
+        console.log(data);
+        return data.meals[0]
+    } catch (error){
+        console.error("Error fetching data: ", error)
+    }
+}
+
+function displayData(recipe) {
+    const {strMeal, strMealThumb, strInstructions} = recipe;
+    const ingredients = [];
+    for (i=1; i<=20; i++){
+        const ingredient = recipe[`strIngredient${i}`];
+        const measure = recipe[`strMeasure${i}`]
+        if(ingredient!==""){
+            ingredients.push(`${ingredient} ${measure}`)
+        }  
+    }
+    const mContent = document.getElementById("cmealcontent")
+    const iContent = document.getElementById("cingredientcontent")
+    const image = document.getElementById("capiimg")
+    mContent.textContent = strMeal
+    iContent.textContent = ingredients
+    image.src = strMealThumb
+
+    console.log(`Meal: ${strMeal}`)
+    console.log(`Picture: ${strMealThumb}`)
+    console.log(`Ingredients and measure: ${ingredients}`)
+    console.log(`Instruction: ${strInstructions}`)
+}
+
+fetchData().then(recipe => {displayData(recipe)});
+
+document.getElementById("changerecipe").addEventListener("click", update)
+function update(){
+    fetchData().then(recipe => {displayData(recipe)});
+}

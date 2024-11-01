@@ -53,3 +53,17 @@
 #caferadio {
     margin-bottom: 10px;
 }
+
+#randomrecipe{
+    font-size: 20px;
+    color: red;
+}
+
+#capiimg {
+    display: block;         
+    margin: 0 auto;        
+    max-width: 400px;     
+    height: auto;        
+    text-align: center;     
+}
+
