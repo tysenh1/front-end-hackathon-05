@@ -10,7 +10,9 @@ const [
 
     bigMacNameError,
     bigMacPhoneNumberError,
-    bigMacIngredientsError
+    bigMacIngredientsError,
+    bigMacMarvelDiv,
+    bigMacMarvelButton
 ] = [
     document.getElementById('BigMacHistory'),
     document.getElementById('BigMacNutrition'),
@@ -22,7 +24,9 @@ const [
     document.getElementById('BigMacFeedbackForm'),
     document.getElementById('BigMacNameInputFormError'),
     document.getElementById('BigMacPhoneNumberInputError'),
-    document.getElementById('BigMacIngredientsInputError')
+    document.getElementById('BigMacIngredientsInputError'),
+    document.getElementById('bigMacMarvelDiv'),
+    document.getElementById('bigMacMarvelButton')
 ]
 
 let newSlideButton = document.getElementById('BigMacNewSlideButton')
@@ -34,6 +38,7 @@ newSlideButton.addEventListener('click', () => {newSlide()})
 toggleFeedbackFormButton.addEventListener('click', () => {toggleBigMacForm()})
 BigMacFeedbackSubmitButton.addEventListener('click', (e) => {validateBigMacForm(e)})
 BigMacFeedbackResetButton.addEventListener('click', () => {resetForm()})
+bigMacMarvelButton.addEventListener('click', () => {toggleBigMacMarvelFacts()})
 
 function BigMacLoad() {
     toggleFeedbackFormButton.innerHTML = 'Show Feedback Form';
@@ -214,6 +219,22 @@ for (let fact of bigMacFactList) {
     let factLi = document.createElement('li')
     factLi.innerHTML = fact
     bigMacFactListElement.appendChild(factLi)
+}
+
+async function toggleBigMacMarvelFacts() {
+    try {
+        const marvelFacts = await fetch('https://www.whenisthenextmcufilm.com/api')
+        .then((data) => {
+            return data.json()
+        })
+        .catch((error) => {throw new Error(error)})
+
+        console.log(marvelFacts)
+    }
+    catch(error) {
+        console.error(error)
+    }
+    
 }
 
 BigMacLoad();
