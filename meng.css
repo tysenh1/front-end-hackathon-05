@@ -66,4 +66,7 @@
     height: auto;        
     text-align: center;     
 }
-
+#changerecipe{
+    font-size: 15px;
+    color: #fcf0d0;
+}

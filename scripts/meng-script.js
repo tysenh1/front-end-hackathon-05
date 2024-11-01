@@ -45,8 +45,6 @@ function addColumn() {
 }
 
 
-
-
 function updateOrder(row) {
     let orderCell = row.querySelectorAll('.mochaprice td')[3];
     orderCell.innerHTML = (parseInt(orderCell.innerHTML) || 0) + 1;
@@ -62,10 +60,11 @@ function updatePrice(row, orderAmount) {
     totalPriceCell.innerHTML ='$' + totalPrice.toFixed(2);
 }
 
+
+//hackathon 4: form
 function hiddenFeedback(){
     document.getElementById("cafeform").style.display="none"
 }
-
 
 document.getElementById("cfeedback").addEventListener("click", showFeedback)
 
@@ -134,7 +133,6 @@ document.getElementById("caferadio").addEventListener("input", function(){clearE
 document.getElementById("cafeproduct").addEventListener("input", function(){clearErrors("product_error")})
 
 //hackthon5: api
-document.getElementById("randomrecipe").style.display = "none"
 
 function showRecipe(){
     if(document.getElementById("randomrecipe").style.display === "none"){
