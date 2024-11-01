@@ -132,3 +132,17 @@ function clearErrors(errorId){
 
 document.getElementById("caferadio").addEventListener("input", function(){clearErrors("rate_error")})
 document.getElementById("cafeproduct").addEventListener("input", function(){clearErrors("product_error")})
+
+//hackthon5: api
+document.getElementById("randomrecipe").style.display = "none"
+
+function showRecipe(){
+    if(document.getElementById("randomrecipe").style.display === "none"){
+        document.getElementById("randomrecipe").style.display = "block"
+    }
+    else{
+        document.getElementById("randomrecipe").style.display = "none"
+    }
+}
+document.getElementById("apibutton").addEventListener("click", showRecipe)
+

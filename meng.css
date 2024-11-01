@@ -30,11 +30,11 @@
     display: block;
 }
 
-.cafefeedback{
+.cafefeedback, #mccafe_api{
     text-align: center;
     margin-top: 15px;
 }
-#cfeedback{
+#cfeedback, #apibutton{
     font-size: 30px;
     color: #fcf0d0;
 }
